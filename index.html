@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIPHY</title>
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <header>
+        <div class="header">
+            <div class="logo">
+                <img src="./assets/header-logo.gif" alt="">
+            </div>
+            <div class="header__left">
+                <ul class="navbar">
+                    <li>
+                        <span>
+                            <img src="./assets/arrow-down.svg" alt="">
+                            Docs
+                        </span>
+                    </li>
+                    <li>
+                        <span>Dashboard</span>
+                    </li>
+                    <li>
+                        <span>FAQs</span>
+                    </li>
+                    <li>
+                        <span>Blog</span>
+                    </li>
+                </ul>
+    
+                <div class="cta-btn header-btn">
+                    Create Account
+                </div>
+                <div class="hamburger">
+                    <img  src="./assets/hamburger1.svg" alt="">
+                    <img src="./assets/hamburger2.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </header>
+</body>
+
+<script>
+    let hamburger = document.querySelector(".hamburger")
+
+    hamburger.addEventListener("click",()=>{
+        if(hamburger.classList.contains("active"))
+        {
+            hamburger.classList.add("inactive");
+            setTimeout(() => {
+                hamburger.classList.remove("active");
+            }, 100);
+        }
+        else
+        {
+            hamburger.classList.add("active");
+            setTimeout(() => {
+                hamburger.classList.remove("inactive");
+            }, 100);
+        }
+    })
+</script>
+</html>

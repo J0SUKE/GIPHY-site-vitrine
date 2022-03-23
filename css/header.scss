@@ -1,0 +1,219 @@
+@import "./globals.scss";
+
+
+header
+{
+    width: 100%;
+    height: 66px;
+}
+
+.cta-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 176px;
+    min-width: 176px;
+    height: 42px;
+    min-height: 42px;
+    
+    background: $btn-gradient;
+    font-weight: 600;
+    font-family: "SpaceMono";
+    border-radius: 3px;
+    cursor: pointer;
+    
+    &:hover
+    {
+        animation: btn-animation 2.5s infinite linear;
+    }
+    
+
+    @keyframes btn-animation {
+        0%{
+            background-position: 0px center;
+        }100%{
+            background-position: -300% center;
+        }
+    }
+}
+
+
+.header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    height: 100%;
+    max-width: 1140px;
+    margin: auto;
+    font-family: "Montserrat";
+
+    @media screen and (max-width:935px) {
+        .header__left
+        {
+            .navbar,.header-btn
+            {
+                display: none;
+            }
+
+            .hamburger
+            {
+                display: unset;
+            }
+        }
+    }
+
+
+    .logo{
+        display: flex;
+        align-items: center;
+        height: 100%;
+        
+        img{
+            height: 50%;
+            width: auto;
+        }
+    }
+
+    &__left
+    {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+        .navbar
+        {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            min-width: 390px;
+            max-width: 390px;
+            margin-right: 20px;
+            height: 100%;
+            padding: 0 20px;
+            
+            li{
+                display: flex;
+                align-items: center;
+                height: 65%;
+                font-weight: 900;
+                
+                cursor: pointer;
+                span
+                {
+                    height: 100%;
+                    border-bottom: 5px solid transparent;
+                    img{
+                        box-sizing: content-box;
+                        padding-right: 5px;
+                    }
+                }    
+
+                &:hover
+                {
+                    span{
+                        border-bottom: 5px solid $turquoise;
+                    }
+                }
+            }
+            
+        }
+
+        .hamburger
+        {
+            display: none;
+            width: 35px;
+            min-width: 35px;
+            height: 35px;
+            min-height: 35px;
+            position: relative;
+
+            &.active{
+                img:first-of-type // hamburger
+                {
+                    animation: hamburger-anim .7s forwards  ;
+                    @keyframes hamburger-anim {
+                        form{
+                            opacity: 1;
+                            transform: rotate(0deg);
+                        }to{
+                            opacity: 0;
+                            transform: rotate(-90deg);
+                        }
+                    }
+                }   
+
+                img:last-of-type // croix
+                {
+                    transform: rotate(0deg);
+                    animation: croix-anim .7s forwards  ;
+                    @keyframes croix-anim {
+                        form{
+                            opacity: 0;
+                            transform: rotate(0deg);
+                        }to{
+                            opacity: 1;
+                            transform: rotate(90deg);
+                        }
+                    }
+                }
+            }
+
+            &.inactive
+            {
+                img:first-of-type // hamburger
+                {
+                    opacity: 0;
+                    transform: rotate(-90deg);
+                    animation: hamburger-anim-reverse .7s forwards;
+                    
+                    @keyframes hamburger-anim-reverse {
+                        form{
+                            opacity: 0;
+                            transform: rotate(-90deg);
+                        }to{
+                            opacity: 1;
+                            transform: rotate(0deg);
+                        }
+                    }
+                }   
+
+                img:last-of-type // croix
+                {
+                    opacity: 1;
+                    transform: rotate(90deg);
+                    animation: croix-anim-reverse .7s forwards;
+                    
+                    @keyframes croix-anim-reverse {
+                        form{
+                            opacity: 1;
+                            transform: rotate(90deg);
+                        }to{
+                            opacity: 0;
+                            transform: rotate(0deg);
+                        }
+                    }
+                }
+            }
+
+            img{
+                position: absolute;
+            }
+            img:first-of-type // hamburger
+            {
+                z-index: 1;
+                opacity: 1;
+                transform: rotate(0deg);
+            
+            }
+            img:last-of-type // croix
+            {
+                z-index: 0;
+                opacity: 0;
+            }
+            
+        }
+    }
+}
+
