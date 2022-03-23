@@ -36,33 +36,115 @@
                 <div class="cta-btn header-btn">
                     Create Account
                 </div>
-                <div class="hamburger">
-                    <img  src="./assets/hamburger1.svg" alt="">
-                    <img src="./assets/hamburger2.svg" alt="">
-                </div>
             </div>
         </div>
     </header>
+
+    <div class="hamburger">
+        <img  src="./assets/hamburger1.svg" alt="">
+        <img src="./assets/hamburger2.svg" alt="">
+    </div>
+
+    <menu class="header-menu">
+        <div class="header-menu__content">
+            <div class="elem1 elem">
+                <h2>SDKs</h2>
+                <ul>
+                    <li><span><a href="#">SDK Overview</a></span></li>
+                    <li><span><a href="#">Content Types</a></span></li>
+                    <li><span><a href="#">Customization</a></span></li>
+                    <li><span><a href="#">iOS SDK</a></span></li>
+                    <li><span><a href="#">Android SDK</a></span></li>
+                    <li><span><a href="#">Web SDK</a></span></li>
+                    <li><span><a href="#">React Native SDK</a></span></li>
+                    <li><span><a href="#">Design Guidelines</a></span></li>
+                    <li><span><a href="#">App Store Submission</a></span></li>
+                </ul>
+
+            </div>
+            <div class="elem2 elem">
+                <h2>API</h2>
+                <ul>
+                    <li><span><a href="#">API Quickstart Guide</a></span></li>
+                    <li><span><a href="#">GIF & Sticker Endpoints</a></span></li>
+                    <li><span><a href="#">Schema Definitions</a></span></li>
+                    <li><span><a href="#">Response Code</a></span></li>
+                </ul>
+                <h2>CLIPS API</h2>
+                <ul>
+                    <li><span><a href="#">What are Clips?</a></span></li>
+                    <li><span><a href="#">Library</a></span></li>
+                    <li><span><a href="#">Content Safety</a></span></li>
+                    <li><span><a href="#">Clips Endpoints</a></span></li>
+                    <li><span><a href="#">Clips Response Schema</a></span></li>
+                    <li><span><a href="#">Examples</a></span></li>
+                </ul>
+
+            </div>
+            <div class="elem3 elem">
+                <h2>Optional Settings</h2>
+                <ul>
+                    <li><span><a href="#"></a>Rendition Guide</a></span></li>
+                    <li><span><a href="#"></a>Language Support</a></span></li>
+                    <li><span><a href="#"></a>Rating System</a></span></li>
+                </ul>                
+
+
+            </div>
+            <div class="elem4 elem">
+                <h2>Trust And Safety</h2>
+                <ul>
+                    <li><span><a href="#"></a>Safe Search Terms</a></span></li>
+                    <li><span><a href="#"></a>GIF Blocking Tool</a></span></li>
+                </ul>
+                
+
+            </div>
+            <div class="elem5 elem">
+                <h2>Resources</h2>
+                <ul>
+                    <li><span><a href="#"></a>Code Examples</a></span></li>
+                    <li><span><a href="#"></a>Support</a></span></li>
+                    <li><span><a href="#"></a>API Explorer</a></span></li>
+                </ul>
+
+            </div>
+            <div class="elem6 elem">
+                <ul>
+                    <li>API Terms of Service</li>
+                    <li>SDK License Agreement</li>
+                    <li>Community Guidelines</li>
+                    <li>Privacy Policy</li>
+                    <li>Copyright</li>
+                </ul>
+            </div>
+        </div>
+    </menu>
+
+    <div class="mobile-header-menu">
+        
+        <div class="mobile-header-menu__content">
+            <ul>
+                <li class="active">Home</li>
+                <li>Docs</li>
+                <li>Dashboard</li>
+                <li>FAQs</li>
+                <li>Blog</li>
+            </ul>
+            <div class="cta-btn">
+                Create Account
+            </div>
+        </div>
+        
+
+    </div>
+
+    <div class="content">
+        <section></section>
+    </div>
+
 </body>
 
-<script>
-    let hamburger = document.querySelector(".hamburger")
+<script type="text/javascript" src="./js/header.js"></script>
 
-    hamburger.addEventListener("click",()=>{
-        if(hamburger.classList.contains("active"))
-        {
-            hamburger.classList.add("inactive");
-            setTimeout(() => {
-                hamburger.classList.remove("active");
-            }, 100);
-        }
-        else
-        {
-            hamburger.classList.add("active");
-            setTimeout(() => {
-                hamburger.classList.remove("inactive");
-            }, 100);
-        }
-    })
-</script>
 </html>

@@ -8,8 +8,14 @@
     src: url("../assets/Space_Mono/SpaceMono-Regular.ttf");
 }
 
+@font-face {
+    font-family: "interface";
+    src: url("../assets/Inter/static/Inter-Medium.ttf");
+}
+
 $turquoise : rgb(0, 230, 204);
 $btn-gradient : linear-gradient(to right, rgb(97, 87, 255), rgb(0, 230, 204), rgb(97, 87, 255)) 0% 100% / 300%;
+$menu-gradien : linear-gradient(-135deg, rgb(0, 255, 153) 0%, rgb(153, 51, 255) 100%);
 
 *,*::before,*::after
 {
