@@ -153,7 +153,7 @@
                 </div>
 
                 <div class="hero__content__right">
-                    <video src="./assets/heroVideo.mp4" autoplay loop playsinline></video>
+                    <video src="./assets/heroVideo.mp4" autoplay loop muted playsinline></video>
                 </div>
             </div>
             <div class="hero__marquie">
@@ -287,9 +287,69 @@
                         </div>
                         <p>Whatever your needs, it’s never been easier to bring the full GIPHY experience to your audience. Built with developers and product designers in mind, our SDK is the solution for incorporating Clips, GIFs, stickers, and exclusive content like GIPHY Text and Emoji into your next app or website.</p>
                     </div>
+
+                    <div class="presentation__bottom">
+                        <div class="presentation__bottom__content">
+                            <div class="presentation__bottom__element">
+                                <img src="./assets/presentation1.gif" alt="">
+                                <h2>Messaging</h2>
+                                <p>Clips, Stickers, Custom Text and GIFs are perfect for messaging or chatting one to one in the DMs.</p>
+                            </div>
+                            <div class="presentation__bottom__element">
+                                <img src="./assets/presentation2.gif" alt="">
+                                <h2>Creation</h2>
+                                <p>Easily enable creation in your app. Animate, layer, and react with the push of a button using our inspiring content library.</p>
+                            </div>
+                            <div class="presentation__bottom__element">
+                                <img src="./assets/presentation3.gif" alt="">
+                                <h2>Posting</h2>
+                                <p>Help your users post like a pro. I’ts a fact; Posts with Clips, Stickers, and GIFs get *167% more click through than static images!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <blockquote>*Ellerling, Nathan. “30 Social Media Engagement Tactics That Will Boost Shares And Conversions” CoSchedule Blog, August 5, 2015. www.coschedule.com/blog/social-media-engagement-tactics. Accessed 6 Oct 2021</blockquote>
+                </div>
+
+                <div class="caroussel">
+                    <img src="./assets/confetti.gif" alt="">
+                    <h1>The GIPHY SDK solves problems so you don’t have to</h1>
+                    
+                    <div class="caroussel__container">
+                        <div class="caroussel__container__slides">
+                            <div class="caroussel__slide">
+                                <h1>slide 1</h1>
+                            </div>
+                            <div class="caroussel__slide">
+                                <h1>slide 2</h1>
+                            </div>
+                            <div class="caroussel__slide">
+                                <h1>slide 3</h1>
+                            </div>
+                        </div>
+                        <div class="caroussel-btn caroussel-btn-prev" data-btn="prev">
+                            <img src="./assets/caroussel-btn-prev.svg" alt="">
+                        </div>
+                        <div class="caroussel-btn caroussel-btn-next" data-btn="next">
+                            <img src="./assets/caroussel-btn-next.svg" alt="">
+                        </div>
+
+                        <div class="smartphone">
+                            <img src="./assets/phone-mock.png" alt="">
+                            <ul class="smartphone-caroussel">
+                                <img src="./assets/phome-slide1-dark.gif" alt="">
+                                <img class="invisible inactive" src="./assets/phome-slide2.gif" alt="">
+                                <img class="invisible inactive" src="./assets/phome-slide3.gif" alt="">
+                            </ul>
+                        </div>
+                        
+                    </div>
                 </div>
             </div>
         </div>
+
+        
+
     </main>
 
 </body>
@@ -297,8 +357,14 @@
 <script type="text/javascript" src="./js/header.js"></script>
 
 <script>
+    try {
+        document.querySelector(".hero__content__right video").play(); // autrement la video demmare 1 fois sur 2 (chrome n'aime pas les videos qui se lancent automatiquement (chrome autoplay policy))    
+    } catch (error) {
+        console.log("erreur");
+    }
     
-    console.log(document.querySelector(".hero__marquie").getBoundingClientRect().width,document.querySelector(".marquee-container").getBoundingClientRect().width,document.querySelector(".marquee-part1").getBoundingClientRect().width,document.querySelector(".marquee-part2").getBoundingClientRect().width);
+    
 </script>
+<script src="./js/caroussel.js"></script>
 
 </html>

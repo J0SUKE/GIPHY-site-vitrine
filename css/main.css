@@ -355,14 +355,14 @@ main {
 .subhero {
   position: relative;
   width: 100%;
-  height: 1200px;
   margin-top: -200px;
 }
 
 .subhero__bg {
   position: absolute;
   inset: 0;
-  height: 100%;
+  height: 365px;
+  margin-top: 100px;
 }
 
 .subhero__bg::before {
@@ -371,7 +371,7 @@ main {
   width: 100%;
   height: 100%;
   opacity: 0.66;
-  background: url("../assets/subHeroBG.svg") center center no-repeat;
+  background: url("../assets/subHeroBG.svg") top center no-repeat;
   pointer-events: none;
 }
 
@@ -395,7 +395,7 @@ main {
 }
 
 .subhero__content .presentation {
-  padding-top: 20px;
+  padding-top: 10vmin;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -432,11 +432,306 @@ main {
 }
 
 .subhero__content .presentation__top__logo {
-  width: 400px;
+  max-width: 400px;
 }
 
 .subhero__content .presentation__top__logo img {
   width: 100%;
   height: auto;
+}
+
+.subhero__content .presentation__bottom {
+  margin-top: 15vmin;
+  width: 93%;
+}
+
+.subhero__content .presentation__bottom__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-family: "interface";
+}
+
+.subhero__content .presentation__bottom__content .presentation__bottom__element {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.subhero__content .presentation__bottom__content .presentation__bottom__element img {
+  max-height: 213px;
+  width: auto;
+}
+
+@media screen and (max-width: 865px) {
+  .subhero__content .presentation__bottom__content .presentation__bottom__element img {
+    max-height: 180px;
+  }
+}
+
+.subhero__content .presentation__bottom__content .presentation__bottom__element h2 {
+  margin: 5vmin 0;
+}
+
+.subhero__content .presentation__bottom__content .presentation__bottom__element p {
+  text-align: center;
+  color: darkgray;
+  line-height: 1.5rem;
+  width: 80%;
+}
+
+@media screen and (max-width: 735px) {
+  .subhero__content .presentation__bottom__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .subhero__content .presentation__bottom__content .presentation__bottom__element {
+    margin: 0 0 5vmin 0;
+    width: 100%;
+  }
+  .subhero__content .presentation__bottom__content .presentation__bottom__element p {
+    font-size: 1.1rem;
+    width: 90%;
+  }
+}
+
+.subhero__content .presentation blockquote {
+  width: 90%;
+  color: #636363;
+  font-family: "interface";
+  text-align: center;
+  margin: 10vmin 0;
+  font-size: .8rem;
+  font-weight: 300;
+}
+
+.caroussel {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.caroussel > img {
+  width: 100px;
+  height: 100px;
+}
+
+.caroussel h1 {
+  font-size: clamp(1.2rem, 3vw, 2.5rem);
+  font-family: "Montserrat-Bold";
+  text-align: center;
+  margin: 5vmin 0;
+  padding: 2vmin 0 16vmin 0;
+}
+
+.caroussel .caroussel__container {
+  height: 470px;
+  width: 100%;
+  position: relative;
+}
+
+.caroussel .caroussel__container__slides {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.caroussel .caroussel__container__slides .caroussel__slide {
+  position: absolute;
+  inset: 0;
+  color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: linear-gradient(-116.565deg, #00ff99 0%, #9933ff 100%);
+  background-size: 300% 300%;
+}
+
+.caroussel .caroussel__container__slides .caroussel__slide h1 {
+  color: black;
+}
+
+.caroussel .caroussel__container__slides .caroussel__slide:nth-of-type(1) {
+  background-position: left;
+  z-index: 3;
+}
+
+.caroussel .caroussel__container__slides .caroussel__slide:nth-of-type(2) {
+  background-position: center;
+  z-index: 2;
+}
+
+.caroussel .caroussel__container__slides .caroussel__slide:nth-of-type(3) {
+  background-position: right;
+  z-index: 1;
+}
+
+.caroussel .caroussel__container .caroussel-btn {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  bottom: 0;
+  width: 50px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.caroussel .caroussel__container .caroussel-btn-next {
+  right: 0;
+}
+
+.caroussel .caroussel__container .caroussel-btn-next img {
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.caroussel .caroussel__container .caroussel-btn-prev {
+  left: 0;
+}
+
+.caroussel .caroussel__container .smartphone {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 480px;
+  height: 789px;
+}
+
+@media screen and (max-width: 500px) {
+  .caroussel .caroussel__container .smartphone {
+    width: 100%;
+  }
+  .caroussel .caroussel__container .smartphone > img {
+    width: 100%;
+  }
+}
+
+.caroussel .caroussel__container .smartphone > img {
+  position: absolute;
+}
+
+.caroussel .caroussel__container .smartphone .smartphone-caroussel {
+  position: absolute;
+  max-width: 279px;
+  width: 279px;
+  height: 76%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  overflow: hidden;
+  border-radius: 37px;
+}
+
+.caroussel .caroussel__container .smartphone .smartphone-caroussel img {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.caroussel .caroussel__container .smartphone .smartphone-caroussel img:first-child {
+  z-index: 3;
+}
+
+.caroussel .caroussel__container .smartphone .smartphone-caroussel img:nth-child(2) {
+  z-index: 2;
+}
+
+.caroussel .caroussel__container .smartphone .smartphone-caroussel img:last-child {
+  z-index: 1;
+}
+
+.caroussel .caroussel__container .smartphone .smartphone-caroussel img.invisible {
+  opacity: 0;
+}
+
+.caroussel .caroussel__container .smartphone .smartphone-caroussel img.inactive {
+  -webkit-animation: img-inactive .7s  forwards;
+          animation: img-inactive .7s  forwards;
+}
+
+@-webkit-keyframes img-inactive {
+  from {
+    bottom: 0;
+  }
+  to {
+    bottom: -100%;
+  }
+}
+
+@keyframes img-inactive {
+  from {
+    bottom: 0;
+  }
+  to {
+    bottom: -100%;
+  }
+}
+
+.caroussel .caroussel__container .smartphone .smartphone-caroussel img.active {
+  bottom: -100%;
+  -webkit-animation: img-active .7s .2s forwards;
+          animation: img-active .7s .2s forwards;
+}
+
+@-webkit-keyframes img-active {
+  from {
+    bottom: -100%;
+  }
+  to {
+    bottom: 0;
+  }
+}
+
+@keyframes img-active {
+  from {
+    bottom: -100%;
+  }
+  to {
+    bottom: 0;
+  }
 }
 /*# sourceMappingURL=main.css.map */

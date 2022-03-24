@@ -18,6 +18,11 @@
   src: url("../assets/Inter/static/Inter-Medium.ttf");
 }
 
+@font-face {
+  font-family: "interface-light";
+  src: url("../assets/Inter/static/Inter-Light.ttf");
+}
+
 *, *::before, *::after {
   padding: 0;
   margin: 0;
