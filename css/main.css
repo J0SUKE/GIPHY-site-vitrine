@@ -1,1 +1,442 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+@font-face {
+  font-family: "Montserrat";
+  src: url("../assets/Montserrat/static/Montserrat-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Montserrat-Bold";
+  src: url("../assets/Montserrat/static/Montserrat-Bold.ttf");
+}
+
+@font-face {
+  font-family: "SpaceMono";
+  src: url("../assets/Space_Mono/SpaceMono-Regular.ttf");
+}
+
+@font-face {
+  font-family: "interface";
+  src: url("../assets/Inter/static/Inter-Medium.ttf");
+}
+
+@font-face {
+  font-family: "interface-light";
+  src: url("../assets/Inter/static/Inter-Light.ttf");
+}
+
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  list-style: none;
+  color: white;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+body {
+  background: black;
+  overflow-x: hidden;
+}
+
+.cta-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 176px;
+  min-width: 176px;
+  height: 42px;
+  min-height: 42px;
+  background: -webkit-gradient(linear, left top, right top, from(#6157ff), color-stop(#00e6cc), to(#6157ff)) 0% 100%/300%;
+  background: linear-gradient(to right, #6157ff, #00e6cc, #6157ff) 0% 100%/300%;
+  font-weight: 600;
+  font-family: "SpaceMono";
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.cta-btn:hover {
+  -webkit-animation: btn-animation 2.5s infinite linear;
+          animation: btn-animation 2.5s infinite linear;
+}
+
+@-webkit-keyframes btn-animation {
+  0% {
+    background-position: 0px center;
+  }
+  100% {
+    background-position: -300% center;
+  }
+}
+
+@keyframes btn-animation {
+  0% {
+    background-position: 0px center;
+  }
+  100% {
+    background-position: -300% center;
+  }
+}
+
+main {
+  position: absolute;
+  top: 0;
+  padding-top: 66px;
+  width: 100%;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: calc(100vh + 495px);
+  margin-top: -356px;
+}
+
+.hero__bg {
+  position: absolute;
+  inset: 0;
+}
+
+@media screen and (max-width: 854px) {
+  .hero__bg {
+    display: none;
+  }
+}
+
+.hero__bg::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.66;
+  background: url("../assets/heoBG.svg") center center no-repeat;
+  pointer-events: none;
+}
+
+.hero__bg::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background-image: linear-gradient(225deg, #00ff99 0%, #9933ff 100%);
+  mix-blend-mode: multiply;
+  opacity: 1;
+  pointer-events: none;
+}
+
+.hero__content {
+  z-index: 1;
+  position: absolute;
+  top: 356px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  height: 679px;
+  width: 100%;
+  max-width: 1140px;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media screen and (max-width: 854px) {
+  .hero__content {
+    display: unset;
+    -webkit-box-pack: unset;
+        -ms-flex-pack: unset;
+            justify-content: unset;
+  }
+  .hero__content .hero__content__left, .hero__content .hero__content__right {
+    position: absolute;
+    inset: 0;
+  }
+  .hero__content .hero__content__left {
+    z-index: 2;
+    width: 100%;
+    padding: 15vmin 15% 0 5%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+}
+
+@media screen and (max-width: 854px) and (max-width: 400px) {
+  .hero__content .hero__content__left {
+    padding: 15vmin 3% 0 4%;
+  }
+  .hero__content .hero__content__left p {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 854px) {
+  .hero__content .hero__content__left h1 {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 854px) and (max-width: 400px) {
+  .hero__content .hero__content__left h1 {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 854px) {
+  .hero__content .hero__content__left p {
+    width: 70%;
+  }
+  .hero__content .hero__content__right {
+    z-index: 1;
+    opacity: .4;
+  }
+  .hero__content .hero__content__right video {
+    width: 70%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 854px) and (max-width: 474px) {
+  .hero__content .hero__content__right {
+    width: 100%;
+  }
+}
+
+.hero__content__left {
+  max-width: 600px;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  padding: 15vmin 0 0 5%;
+  width: 50%;
+  background: transparent;
+}
+
+.hero__content__left h1 {
+  font-family: "Montserrat-Bold";
+  font-weight: 900;
+  font-size: 2.8rem;
+}
+
+.hero__content__left p {
+  font-family: "interface";
+  width: 90%;
+  font-size: 1.1rem;
+  margin: 4vmin 0;
+  line-height: 1.8rem;
+  color: darkgray;
+}
+
+.hero__content__right {
+  margin-top: -50px;
+  width: 470px;
+  height: 100%;
+  position: relative;
+}
+
+.hero__content__right::before {
+  content: "";
+  position: absolute;
+  height: 100px;
+  background: black;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.hero__content__right video {
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  top: 0;
+  width: 450px;
+  height: auto;
+  vertical-align: baseline;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -webkit-clip-path: polygon(13.52% 91.93%, 13.07% 90.05%, 13.75% 88.23%, 14.69% 86.49%, 15.25% 79.85%, 0px 61%, 20.33% 2.96%, 86.69% 1.96%, 86.4% 38.29%, 93.53% 47.96%, 87.77% 47.72%, 86.34% 88.9%, 86.61% 92.73%, 82.96% 96.63%, 16.86% 94.49%);
+          clip-path: polygon(13.52% 91.93%, 13.07% 90.05%, 13.75% 88.23%, 14.69% 86.49%, 15.25% 79.85%, 0px 61%, 20.33% 2.96%, 86.69% 1.96%, 86.4% 38.29%, 93.53% 47.96%, 87.77% 47.72%, 86.34% 88.9%, 86.61% 92.73%, 82.96% 96.63%, 16.86% 94.49%);
+}
+
+.hero__marquie {
+  height: 100px;
+  width: 100vw;
+  overflow-x: hidden;
+  position: absolute;
+  bottom: 0;
+  top: 860px;
+  z-index: 0;
+  overflow-y: hidden;
+}
+
+.hero__marquie .marquee-container {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.hero__marquie .marquee-container .marquee-part1, .hero__marquie .marquee-container .marquee-part2 {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.hero__marquie .marquee-container .marquee-part1 li, .hero__marquie .marquee-container .marquee-part2 li {
+  height: 100%;
+  padding: 0 20px;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+.hero__marquie .marquee-container .marquee-part1 li img, .hero__marquie .marquee-container .marquee-part2 li img {
+  opacity: .5;
+  height: 120px;
+  width: auto;
+}
+
+.hero__marquie .marquee-container .marquee-part1 {
+  -webkit-animation: marquee-animation1 31s infinite linear;
+          animation: marquee-animation1 31s infinite linear;
+}
+
+@-webkit-keyframes marquee-animation1 {
+  from {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  to {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+
+@keyframes marquee-animation1 {
+  from {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  to {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+
+.hero__marquie .marquee-container .marquee-part2 {
+  -webkit-animation: marquee-animation1 31s infinite linear;
+          animation: marquee-animation1 31s infinite linear;
+}
+
+@keyframes marquee-animation1 {
+  from {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  to {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+
+.subhero {
+  position: relative;
+  width: 100%;
+  height: 1200px;
+  margin-top: -200px;
+}
+
+.subhero__bg {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+}
+
+.subhero__bg::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.66;
+  background: url("../assets/subHeroBG.svg") center center no-repeat;
+  pointer-events: none;
+}
+
+.subhero__bg::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background-image: linear-gradient(225deg, #00ff99 0%, #9933ff 100%);
+  mix-blend-mode: multiply;
+  opacity: 1;
+  pointer-events: none;
+}
+
+.subhero__content {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.subhero__content .presentation {
+  padding-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.subhero__content .presentation__top {
+  width: 65%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.subhero__content .presentation__top p {
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 300;
+  line-height: 1.8rem;
+  font-family: "interface-light";
+}
+
+.subhero__content .presentation__top__logo {
+  width: 400px;
+}
+
+.subhero__content .presentation__top__logo img {
+  width: 100%;
+  height: auto;
+}
+/*# sourceMappingURL=main.css.map */

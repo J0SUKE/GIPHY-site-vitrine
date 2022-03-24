@@ -4,6 +4,11 @@
 }
 
 @font-face {
+  font-family: "Montserrat-Bold";
+  src: url("../assets/Montserrat/static/Montserrat-Bold.ttf");
+}
+
+@font-face {
   font-family: "SpaceMono";
   src: url("../assets/Space_Mono/SpaceMono-Regular.ttf");
 }
@@ -30,15 +35,6 @@ a {
 body {
   background: black;
   overflow-x: hidden;
-}
-
-header {
-  position: fixed;
-  left: 0;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 66px;
 }
 
 .cta-btn {
@@ -86,6 +82,17 @@ header {
   }
 }
 
+header {
+  position: fixed;
+  z-index: 99;
+  left: 0;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 66px;
+  background: black;
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -122,6 +129,13 @@ header {
 .header .logo img {
   height: 50%;
   width: auto;
+}
+
+@media screen and (max-width: 400px) {
+  .header .logo img {
+    width: 250px;
+    height: auto;
+  }
 }
 
 .header__left {
@@ -184,12 +198,12 @@ header {
 .hamburger {
   display: none;
   position: fixed;
-  z-index: 99;
+  z-index: 100;
   width: 35px;
   min-width: 35px;
   height: 35px;
   min-height: 35px;
-  top: 20px;
+  top: 15px;
   right: 20px;
 }
 
@@ -356,6 +370,7 @@ header {
       -ms-flex-align: center;
           align-items: center;
   position: fixed;
+  z-index: 99;
   inset: 0 0 0 0;
   width: 100%;
   height: 100vh;
@@ -530,6 +545,7 @@ header {
       -ms-flex-align: center;
           align-items: center;
   position: fixed;
+  z-index: 99;
   top: 66px;
   left: 0;
   width: 100%;

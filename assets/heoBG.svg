@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="2088px" height="1057px" viewBox="0 0 2088 1057" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.1 (78136) - https://sketchapp.com -->
+    <title>backgroundshapes-divided-1</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="3.57353646%" y1="93.5291034%" x2="3.57353646%" y2="43.3395286%" id="linearGradient-1">
+            <stop stop-color="#000000" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#000000" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="22.4170565%" y1="100%" x2="66.980848%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#000000" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#000000" offset="100%"></stop>
+        </linearGradient>
+        <polyline id="path-3" points="1532 88 1532 468 1897 468"></polyline>
+        <linearGradient x1="42.2480022%" y1="86.4565747%" x2="48.7781904%" y2="-30.3893208%" id="linearGradient-4">
+            <stop stop-color="#000000" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#000000" offset="100%"></stop>
+        </linearGradient>
+        <circle id="path-5" cx="1739.41389" cy="889.413887" r="165"></circle>
+        <linearGradient x1="43.7419%" y1="62.9098239%" x2="64.8278592%" y2="62.9098239%" id="linearGradient-6">
+            <stop stop-color="#000000" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#000000" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="12.6680928%" y1="50%" x2="-8.19503868%" y2="47.2766129%" id="linearGradient-7">
+            <stop stop-color="#000000" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#000000" offset="100%"></stop>
+        </linearGradient>
+        <polyline id="path-8" points="572 691 572 767 1113.38179 767 1113.38179 823 1281 823"></polyline>
+        <linearGradient x1="77.2056536%" y1="51.95329%" x2="93.3316647%" y2="67.5483277%" id="linearGradient-9">
+            <stop stop-color="#000000" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#000000" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="30.4362067%" y1="36.708287%" x2="-2.55988694%" y2="30.78%" id="linearGradient-10">
+            <stop stop-color="#000000" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#000000" offset="100%"></stop>
+        </linearGradient>
+        <polyline id="path-11" points="251 442 316.440766 442 316.440766 502.980786 381 502.980786 381 566 451 566"></polyline>
+    </defs>
+    <g id="backgroundshapes-divided-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Path-2" stroke-width="2">
+            <use stroke="#FFFFFF" xlink:href="#path-3"></use>
+            <use stroke="url(#linearGradient-1)" xlink:href="#path-3"></use>
+            <use stroke="url(#linearGradient-2)" xlink:href="#path-3"></use>
+        </g>
+        <g id="Oval-Copy" transform="translate(1739.413887, 889.413887) rotate(-149.000000) translate(-1739.413887, -889.413887) " stroke-width="2">
+            <use stroke="#FFFFFF" xlink:href="#path-5"></use>
+            <use stroke="url(#linearGradient-4)" xlink:href="#path-5"></use>
+        </g>
+        <g id="Path-3" stroke-width="2">
+            <use stroke="#FFFFFF" xlink:href="#path-8"></use>
+            <use stroke="url(#linearGradient-6)" xlink:href="#path-8"></use>
+            <use stroke="url(#linearGradient-7)" xlink:href="#path-8"></use>
+        </g>
+        <g id="Path-3" opacity="0.5" transform="translate(351.000000, 504.000000) rotate(-360.000000) translate(-351.000000, -504.000000) " stroke-width="2">
+            <use stroke="#FFFFFF" xlink:href="#path-11"></use>
+            <use stroke="url(#linearGradient-9)" xlink:href="#path-11"></use>
+            <use stroke="url(#linearGradient-10)" xlink:href="#path-11"></use>
+        </g>
+    </g>
+</svg>

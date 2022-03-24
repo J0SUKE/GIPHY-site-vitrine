@@ -11,11 +11,10 @@ let mombileMenu = document.querySelector(".mobile-header-menu");
             
             hamburger.classList.add("inactive");
             mombileMenu.classList.add("inactive");
-
-
+            
             setTimeout(() => {
                 hamburger.classList.remove("active");
-                mombileMenu.classList.remove("active");                
+                mombileMenu.classList.remove("active");    
             }, 100);
         }
         else
@@ -41,16 +40,17 @@ let mombileMenu = document.querySelector(".mobile-header-menu");
 //-----------------header menu---------------------------
 
 let docs = document.querySelector(".navbar > li");
-    let headerMenu = document.querySelector(".header-menu");
-    
-    docs.addEventListener("mouseover",()=>{
-        headerMenu.classList.add("active");
-    })
-    
-    headerMenu.addEventListener("mouseleave",()=>{
-        headerMenu.classList.add("inactive");
-        setTimeout(() => {
-            headerMenu.classList.remove("active");
-            headerMenu.classList.remove("inactive");
-        }, 300);
-    })
+let headerMenu = document.querySelector(".header-menu");
+
+docs.addEventListener("mouseover",()=>{
+    headerMenu.classList.add("active");
+})
+
+headerMenu.addEventListener("mouseleave",()=>{
+    headerMenu.classList.add("inactive");
+
+    setTimeout(() => {
+        headerMenu.classList.remove("active");
+        headerMenu.classList.remove("inactive");
+    }, 300);
+})

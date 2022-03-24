@@ -4,6 +4,11 @@
 }
 
 @font-face {
+  font-family: "Montserrat-Bold";
+  src: url("../assets/Montserrat/static/Montserrat-Bold.ttf");
+}
+
+@font-face {
   font-family: "SpaceMono";
   src: url("../assets/Space_Mono/SpaceMono-Regular.ttf");
 }
@@ -11,6 +16,11 @@
 @font-face {
   font-family: "interface";
   src: url("../assets/Inter/static/Inter-Medium.ttf");
+}
+
+@font-face {
+  font-family: "interface-light";
+  src: url("../assets/Inter/static/Inter-Light.ttf");
 }
 
 *, *::before, *::after {
@@ -30,5 +40,50 @@ a {
 body {
   background: black;
   overflow-x: hidden;
+}
+
+.cta-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 176px;
+  min-width: 176px;
+  height: 42px;
+  min-height: 42px;
+  background: -webkit-gradient(linear, left top, right top, from(#6157ff), color-stop(#00e6cc), to(#6157ff)) 0% 100%/300%;
+  background: linear-gradient(to right, #6157ff, #00e6cc, #6157ff) 0% 100%/300%;
+  font-weight: 600;
+  font-family: "SpaceMono";
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.cta-btn:hover {
+  -webkit-animation: btn-animation 2.5s infinite linear;
+          animation: btn-animation 2.5s infinite linear;
+}
+
+@-webkit-keyframes btn-animation {
+  0% {
+    background-position: 0px center;
+  }
+  100% {
+    background-position: -300% center;
+  }
+}
+
+@keyframes btn-animation {
+  0% {
+    background-position: 0px center;
+  }
+  100% {
+    background-position: -300% center;
+  }
 }
 /*# sourceMappingURL=globals.css.map */

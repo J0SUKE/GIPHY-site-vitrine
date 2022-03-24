@@ -2,6 +2,10 @@
     font-family: "Montserrat";
     src: url("../assets/Montserrat/static/Montserrat-Regular.ttf");
 }
+@font-face {
+    font-family: "Montserrat-Bold";
+    src: url("../assets/Montserrat/static/Montserrat-Bold.ttf");
+}
 
 @font-face {
     font-family: "SpaceMono";
@@ -13,9 +17,15 @@
     src: url("../assets/Inter/static/Inter-Medium.ttf");
 }
 
+@font-face {
+    font-family: "interface-light";
+    src: url("../assets/Inter/static/Inter-Light.ttf");
+}
+
 $turquoise : rgb(0, 230, 204);
 $btn-gradient : linear-gradient(to right, rgb(97, 87, 255), rgb(0, 230, 204), rgb(97, 87, 255)) 0% 100% / 300%;
 $menu-gradien : linear-gradient(-135deg, rgb(0, 255, 153) 0%, rgb(153, 51, 255) 100%);
+$header-height:66px;
 
 *,*::before,*::after
 {
@@ -33,4 +43,34 @@ a{
 body{
     background: black;
     overflow-x: hidden;
+}
+
+.cta-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 176px;
+    min-width: 176px;
+    height: 42px;
+    min-height: 42px;
+    
+    background: $btn-gradient;
+    font-weight: 600;
+    font-family: "SpaceMono";
+    border-radius: 3px;
+    cursor: pointer;
+    
+    &:hover
+    {
+        animation: btn-animation 2.5s infinite linear;
+    }
+    
+
+    @keyframes btn-animation {
+        0%{
+            background-position: 0px center;
+        }100%{
+            background-position: -300% center;
+        }
+    }
 }
