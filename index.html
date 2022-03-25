@@ -318,15 +318,61 @@
                     <div class="caroussel__container">
                         <div class="caroussel__container__slides">
                             <div class="caroussel__slide">
-                                <h1>slide 1</h1>
+                                <div class="caroussel__slide__content">
+                                    <div class="caroussel__slide__content__left">
+                                        <h3>Customizable UI</h3>
+                                        <p>Toggle between different layouts, color themes and display options with the touch of a button. For the first time, no two GIPHY’s are alike.</p>
+                                    </div>
+                                    
+                                    <div class="caroussel__slide__content__right">
+                                        <div class="theme-btn">
+                                            <div class="theme-btn__icons">
+                                                <img data-theme="dark" src="./assets/icons8-moon-symbol-30.png" alt="">
+                                                <img data-theme="light" src="./assets/icons8-sun-50.png" alt="">
+                                            </div>
+                                            <div class="theme-btn__container">
+                                                <p data-theme="dark">Dark</p>
+                                                <p data-theme="light">Light</p>
+                                                <span class="cursor">Dark</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
                             </div>
                             <div class="caroussel__slide">
-                                <h1>slide 2</h1>
+        
+                                <div class="caroussel__slide__content">
+                                    <div class="caroussel__slide__content__left">
+                                        <h3>Exclusive Content</h3>
+                                        <p>With the SDK in your app, your users get an infinite library of high quality GIFs, Clips & Stickers: All the classics, content from our top tier partners, GIPHY Artists, GIPHY Originals, and everything else you won’t find anywhere else.</p>
+                                    </div>
+                                    
+                                    <div class="caroussel__slide__content__right">
+                                        <h3>Sound on for GIPHY Clips</h3>
+                                        <p>The latest content type to join the SDK offering is GIPHY Clips. Just like GIFs but with sound, these short videos are optimized for conversation and come ready for in-line playback with our new Video Components.</p>
+                                    </div>
+                                </div>
                             </div>
                             <div class="caroussel__slide">
-                                <h1>slide 3</h1>
+                                <div class="caroussel__slide__stickers">
+                                    <img src="./assets/01_peeker.gif" alt="">
+                                    <img src="./assets/02_peeker.gif" alt="">
+                                </div>
+                                <div class="caroussel__slide__content">
+                                    <div class="caroussel__slide__content__left">
+                                        <h3>Unmatched Search</h3>
+                                        <p>A powerful search algorithm developed by our world class engineering team and vetted by the biggest apps is now yours. Deliver the right GIF, at the right time, every time.</p>
+                                    </div>
+                                    
+                                    <div class="caroussel__slide__content__right">
+                                        <h3>Smart Analytics</h3>
+                                        <p>What good is the best content without the tools to match? Our analytics learn from user behavior to help us deliver smarter results and boost user engagement.</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+                        
                         <div class="caroussel-btn caroussel-btn-prev" data-btn="prev">
                             <img src="./assets/caroussel-btn-prev.svg" alt="">
                         </div>
@@ -337,34 +383,39 @@
                         <div class="smartphone">
                             <img src="./assets/phone-mock.png" alt="">
                             <ul class="smartphone-caroussel">
-                                <img src="./assets/phome-slide1-dark.gif" alt="">
+                                <img class="dark" src="./assets/phome-slide1-dark.gif" alt="">
                                 <img class="invisible inactive" src="./assets/phome-slide2.gif" alt="">
                                 <img class="invisible inactive" src="./assets/phome-slide3.gif" alt="">
                             </ul>
                         </div>
                         
+                        <div class="caroussel-indicator">
+                            <p>1 / 3</p>
+                            <div class="caroussel-indicator__cases">
+                                <span></span>
+                                <span class="inactive"></span>
+                                <span class="inactive"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mobile-theme-btn">
+                        <div class="mobile-theme-btn__container">
+                            <p data-theme="dark">Dark</p>
+                            <p data-theme="light">Light</p>
+                            <span class="cursor">Dark</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
         
-
     </main>
 
 </body>
 
 <script type="text/javascript" src="./js/header.js"></script>
 
-<script>
-    try {
-        document.querySelector(".hero__content__right video").play(); // autrement la video demmare 1 fois sur 2 (chrome n'aime pas les videos qui se lancent automatiquement (chrome autoplay policy))    
-    } catch (error) {
-        console.log("erreur");
-    }
-    
-    
-</script>
 <script src="./js/caroussel.js"></script>
 
 </html>
