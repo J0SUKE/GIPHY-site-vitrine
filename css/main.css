@@ -893,15 +893,6 @@ main {
   height: 789px;
 }
 
-@media screen and (max-width: 500px) {
-  .caroussel .caroussel__container .smartphone {
-    width: 100%;
-  }
-  .caroussel .caroussel__container .smartphone > img {
-    width: 100%;
-  }
-}
-
 .caroussel .caroussel__container .smartphone > img {
   position: absolute;
 }
@@ -988,6 +979,35 @@ main {
   }
   to {
     bottom: 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .caroussel .caroussel__container .smartphone {
+    width: 350px;
+    max-width: 350px;
+    height: 100%;
+  }
+  .caroussel .caroussel__container .smartphone > img {
+    max-width: 100%;
+    width: 100%;
+  }
+  .caroussel .caroussel__container .smartphone .smartphone-caroussel {
+    width: 350px;
+    max-width: 350px;
+    height: 100%;
+    border-radius: 0px;
+  }
+  .caroussel .caroussel__container .smartphone .smartphone-caroussel img {
+    position: absolute;
+    bottom: 0;
+    width: 204px;
+    min-width: 204px;
+    max-width: 204px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    height: auto;
   }
 }
 
@@ -1134,5 +1154,14 @@ main {
           transform: translateX(100%);
   -webkit-animation: cursor-dark .3s forwards;
           animation: cursor-dark .3s forwards;
+}
+
+@media screen and (max-width: 500px) {
+  .caroussel .mobile-theme-btn__container {
+    margin-top: 3vmin;
+    width: 204px;
+    min-width: 204px;
+    max-width: 204px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

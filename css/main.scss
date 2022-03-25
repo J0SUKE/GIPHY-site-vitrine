@@ -658,12 +658,6 @@ main
             width: 480px;
             height: 789px;
 
-            @media screen and(max-width:500px) {
-                width: 100%;
-                &>img{
-                    width: 100%;
-                }
-            }
 
             &>img{
                 position: absolute;
@@ -733,6 +727,33 @@ main
                         }
                     }
                     
+                }
+            }
+
+            @media screen and(max-width:500px) {
+                &>img{
+                    max-width: 100%;
+                    width: 100%;
+                }
+                width: 350px;
+                max-width: 350px;
+                height: 100%;
+                .smartphone-caroussel
+                {
+                    width: 350px;
+                    max-width: 350px;
+                    height: 100%;
+                    border-radius: 0px;
+                    img{
+                        position: absolute;
+                        bottom: 0;
+                        width: 204px;
+                        min-width: 204px;
+                        max-width: 204px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        height: auto;
+                    }
                 }
             }
 
@@ -876,6 +897,13 @@ main
                     transform: translateX(100%);
                     animation: cursor-dark .3s forwards;
                 }
+            }
+
+            @media screen and(max-width:500px) {
+                margin-top: 3vmin;
+                width: 204px;
+                min-width: 204px;
+                max-width: 204px;
             }
         }
     }
