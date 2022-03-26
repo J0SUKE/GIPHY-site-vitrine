@@ -1150,6 +1150,226 @@ main
     
 }
 
+.conclusion
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 18vmin;
+    &>img{
+        width: 100px;
+        height: 100px;
+    }
+    &>h1{
+        font-family: "Montserrat-Bold";
+        font-size: 3rem;
+        font-weight: 800;
+    }
+    &>p{
+        margin: 3vmin 0;
+        font-family: "interface";   
+        width: 85%;
+        text-align: center;
+        font-size: 1.2rem;
+        line-height: 2rem;
+    }
+
+    &__content
+    {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 1340px;
+        margin: 10vmin 0;
+
+        &__section
+        {
+            display: flex;
+            justify-content: space-between;
+            margin: 3vmin 0;
+            .conclusion__content__element
+            {
+                overflow: hidden;
+                width: 50%;
+                &>img{
+                    height: 100%;
+                    width: auto;
+                }
+
+                h3{
+                    font-family: "interface";
+                    margin: 2vmin 0;
+                    font-size: clamp(1.1rem,2vw,1.3rem);
+                }
+                p{
+                    font-family: "interface-light";
+                    margin: 2vmin 0;
+                    color: darkgray;
+                    font-size: clamp(1rem,1.7vw,1.2rem);
+                    line-height: 1.5rem;
+                    width: 65%;
+                }
+                span
+                {
+                    font-family: "SpaceMono";
+                    display: inline-block;
+                    margin-right: 1vmin;
+                    font-size: 1.1rem;
+                    position: relative;
+                    cursor: pointer;
+                    background : linear-gradient(to right, rgb(49, 145, 255), rgb(0, 230, 204), rgb(49, 145, 255)) 0px 100% / 300%;
+                    color: transparent;
+                    -webkit-background-clip: text;
+                    &::after
+                    {
+                        content: "";
+                        position: absolute;
+                        bottom: 0;
+                        height: 1px ;
+                        background : linear-gradient(to right, rgb(49, 145, 255), rgb(0, 230, 204), rgb(49, 145, 255)) 0px 100% / 300%;
+                        left: 0;
+                        right: 0;
+                    }
+    
+                    &:hover
+                    {
+                        animation: btn-animation 2.5s infinite;
+                        &::after
+                        {
+                            animation: btn-animation 2.5s infinite;
+                        }
+    
+                        &+img
+                        {
+                            transform: rotate(-90deg) translateY(5px);
+                            
+                        }
+                    }
+    
+                }
+                div{
+                    img{
+                        transform: rotate(-90deg);
+                        transition: all .3s;
+                    }
+                }
+            }
+
+            &:nth-child(2n+1)
+            {
+                .conclusion__content__element:nth-child(1)
+                {
+                    padding: 5% 0 0 8%;
+                }   
+            }
+            &:nth-child(2n)
+            {
+                .conclusion__content__element:nth-child(2)
+                {
+                    padding: 5% 0 0 8%;
+                }   
+            }
+
+            @media screen and(max-width:700px) {
+                display: flex;
+                flex-direction: column; 
+                .conclusion__content__element
+                {
+                    width: 100%;
+                    &>img{
+                        max-width: 350px;
+                        height: auto;
+                    }
+                
+                }   
+
+                &:nth-child(2n+1)
+                {
+                    flex-direction: column-reverse;
+                    .conclusion__content__element:nth-child(1)
+                    {
+                        padding: 5% 0 0 5%;
+                        p{
+                            width: 90%;
+                        }
+                    }
+                }
+
+                &:nth-child(2n)
+                {
+                    .conclusion__content__element:nth-child(2)
+                    {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-end;
+                        padding: 5% 3% 0 5%;
+                        p{
+                            width: 100%;
+                            text-align: end;
+                        }
+                        
+
+                    }
+                    .conclusion__content__element:nth-child(1)
+                    {
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: flex-end;
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
+.lastSection
+{
+    width: 100%;
+    background: $menu-gradien;
+    height: 450px;
+    margin-top: 10vmin;
+    
+    &__content
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 1;
+        width: 100%;
+        max-width: 1140px;
+        margin: auto;
+        padding: 10vmin 0;
+        &>img{
+            width: 120px;
+            height: 120px;
+        }
+        h1{
+            font-size: 3rem;
+            font-family: "Montserrat-Bold";
+            font-weight: 800;
+        }
+        p{
+            font-family: "interface";
+            color: lightgray;
+            margin: 3vmin 0 6vmin 0;
+        }
+        .cta-btn{
+            span{
+                background-image: linear-gradient(to right, rgb(49, 145, 255), rgb(0, 230, 204));
+                color: transparent;
+                -webkit-background-clip: text;
+            }
+            
+            
+            background: black;
+            border: 0;
+        }
+    }
+    
+}
+
 .footer-menu
 {
     width: 100%;
@@ -1357,3 +1577,4 @@ main
     }
 
 }
+

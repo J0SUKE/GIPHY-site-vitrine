@@ -53,6 +53,11 @@ body{
     }
 }
 
+button{
+    outline: none;
+    border: none;
+}
+
 .cta-btn{
     display: flex;
     align-items: center;
@@ -61,7 +66,7 @@ body{
     min-width: 176px;
     height: 42px;
     min-height: 42px;
-    
+    font-size: 1rem;
     background: $btn-gradient;
     font-weight: 600;
     font-family: "SpaceMono";

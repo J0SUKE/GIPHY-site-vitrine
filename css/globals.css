@@ -60,6 +60,11 @@ body {
   }
 }
 
+button {
+  outline: none;
+  border: none;
+}
+
 .cta-btn {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -74,6 +79,7 @@ body {
   min-width: 176px;
   height: 42px;
   min-height: 42px;
+  font-size: 1rem;
   background: -webkit-gradient(linear, left top, right top, from(#6157ff), color-stop(#00e6cc), to(#6157ff)) 0% 100%/300%;
   background: linear-gradient(to right, #6157ff, #00e6cc, #6157ff) 0% 100%/300%;
   font-weight: 600;
