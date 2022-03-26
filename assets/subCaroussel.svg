@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="2088px" height="4553px" viewBox="0 0 2088 4553" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>backgroundshapes-divided-3</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="0%" y1="90.9937432%" x2="77.6244399%" y2="20.7415274%" id="linearGradient-1">
+            <stop stop-color="#000000" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#000000" stop-opacity="0.897898248" offset="100%"></stop>
+            <stop stop-color="#000000" offset="100%"></stop>
+        </linearGradient>
+        <polygon id="path-2" points="977 33 1024.59751 33 1024.59751 75.324538 1066.42831 75.324538 1066.42831 119.056152 1113 119.056152 1113 163 977 163"></polygon>
+        <linearGradient x1="33.2257046%" y1="7.28427418%" x2="5.2748265%" y2="7.28427418%" id="linearGradient-3">
+            <stop stop-color="#000000" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#000000" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="45.8036409%" y1="100%" x2="100%" y2="100%" id="linearGradient-4">
+            <stop stop-color="#000000" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#000000" offset="100%"></stop>
+        </linearGradient>
+        <polyline id="path-5" points="165 2788 388.771316 2788 388.771316 3028 685 3028"></polyline>
+        <linearGradient x1="31.2819682%" y1="64.1083313%" x2="0%" y2="28.8406893%" id="linearGradient-6">
+            <stop stop-color="#000000" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#000000" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="45.8036409%" y1="100%" x2="100%" y2="100%" id="linearGradient-7">
+            <stop stop-color="#000000" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#000000" offset="100%"></stop>
+        </linearGradient>
+        <polyline id="path-8" points="1616 4206 1809.66485 4206 1809.66485 4446 1957 4446"></polyline>
+        <linearGradient x1="42.2480022%" y1="86.4565747%" x2="48.7781904%" y2="-30.3893208%" id="linearGradient-9">
+            <stop stop-color="#000000" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#000000" offset="100%"></stop>
+        </linearGradient>
+        <circle id="path-10" cx="216.674307" cy="3849" r="206"></circle>
+        <linearGradient x1="31.2819682%" y1="64.1914435%" x2="0%" y2="28.7160397%" id="linearGradient-11">
+            <stop stop-color="#000000" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#000000" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="45.8036409%" y1="100%" x2="100%" y2="100%" id="linearGradient-12">
+            <stop stop-color="#000000" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#000000" offset="100%"></stop>
+        </linearGradient>
+        <polyline id="path-13" points="1504 3367 1697.66485 3367 1697.66485 3607 1844 3607"></polyline>
+        <linearGradient x1="3.57353646%" y1="93.5291034%" x2="3.57353646%" y2="22.9151336%" id="linearGradient-14">
+            <stop stop-color="#000000" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#000000" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="8.72365027%" y1="100%" x2="78.2310214%" y2="100%" id="linearGradient-15">
+            <stop stop-color="#000000" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#000000" offset="100%"></stop>
+        </linearGradient>
+        <polyline id="path-16" points="317 946 317 1146 532 1146"></polyline>
+        <polyline id="path-17" points="1669 1809 1669 2009 1884 2009"></polyline>
+    </defs>
+    <g id="backgroundshapes-divided-3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Path-3-Copy" transform="translate(1045.000000, 98.000000) rotate(-225.000000) translate(-1045.000000, -98.000000) " stroke-width="2">
+            <use stroke="#FFFFFF" xlink:href="#path-2"></use>
+            <use stroke="url(#linearGradient-1)" xlink:href="#path-2"></use>
+        </g>
+        <g id="Path-2-Copy-2" transform="translate(425.000000, 2908.000000) rotate(-270.000000) translate(-425.000000, -2908.000000) ">
+            <use stroke="#FFFFFF" stroke-width="2" xlink:href="#path-5"></use>
+            <use stroke="url(#linearGradient-3)" stroke-width="3" xlink:href="#path-5"></use>
+            <use stroke="url(#linearGradient-4)" stroke-width="3" xlink:href="#path-5"></use>
+        </g>
+        <g id="Path-2-Copy-2" transform="translate(1786.500000, 4326.000000) rotate(-270.000000) translate(-1786.500000, -4326.000000) " stroke-width="2">
+            <use stroke="#FFFFFF" xlink:href="#path-8"></use>
+            <use stroke="url(#linearGradient-6)" xlink:href="#path-8"></use>
+            <use stroke="url(#linearGradient-7)" xlink:href="#path-8"></use>
+        </g>
+        <g id="Oval-Copy-4" transform="translate(216.674307, 3849.000000) rotate(-149.000000) translate(-216.674307, -3849.000000) " stroke-width="2">
+            <use stroke="#FFFFFF" xlink:href="#path-10"></use>
+            <use stroke="url(#linearGradient-9)" xlink:href="#path-10"></use>
+        </g>
+        <g id="Path-2-Copy-3" stroke-width="2">
+            <use stroke="#FFFFFF" xlink:href="#path-13"></use>
+            <use stroke="url(#linearGradient-11)" xlink:href="#path-13"></use>
+            <use stroke="url(#linearGradient-12)" xlink:href="#path-13"></use>
+        </g>
+        <g id="Path-2" transform="translate(424.500000, 1046.000000) rotate(-90.000000) translate(-424.500000, -1046.000000) " stroke-width="2">
+            <use stroke="#FFFFFF" xlink:href="#path-16"></use>
+            <use stroke="url(#linearGradient-14)" xlink:href="#path-16"></use>
+            <use stroke="url(#linearGradient-15)" xlink:href="#path-16"></use>
+        </g>
+        <g id="Path-2" stroke-width="2">
+            <use stroke="#FFFFFF" xlink:href="#path-17"></use>
+            <use stroke="url(#linearGradient-14)" xlink:href="#path-17"></use>
+            <use stroke="url(#linearGradient-15)" xlink:href="#path-17"></use>
+        </g>
+    </g>
+</svg>

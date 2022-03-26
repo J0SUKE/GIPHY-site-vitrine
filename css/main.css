@@ -42,6 +42,24 @@ body {
   overflow-x: hidden;
 }
 
+@-webkit-keyframes btn-animation {
+  0% {
+    background-position: 0px center;
+  }
+  100% {
+    background-position: -300% center;
+  }
+}
+
+@keyframes btn-animation {
+  0% {
+    background-position: 0px center;
+  }
+  100% {
+    background-position: -300% center;
+  }
+}
+
 .cta-btn {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -67,24 +85,6 @@ body {
 .cta-btn:hover {
   -webkit-animation: btn-animation 2.5s infinite linear;
           animation: btn-animation 2.5s infinite linear;
-}
-
-@-webkit-keyframes btn-animation {
-  0% {
-    background-position: 0px center;
-  }
-  100% {
-    background-position: -300% center;
-  }
-}
-
-@keyframes btn-animation {
-  0% {
-    background-position: 0px center;
-  }
-  100% {
-    background-position: -300% center;
-  }
 }
 
 main {
@@ -365,6 +365,12 @@ main {
   margin-top: 100px;
 }
 
+@media screen and (max-width: 854px) {
+  .subhero__bg {
+    display: none;
+  }
+}
+
 .subhero__bg::before {
   content: "";
   position: absolute;
@@ -515,6 +521,211 @@ main {
   margin: 10vmin 0;
   font-size: .8rem;
   font-weight: 300;
+}
+
+.api-presentation {
+  width: 100%;
+  overflow-x: hidden;
+  margin: 5vmin 0 8vmin 0;
+  position: relative;
+  overflow: visible;
+}
+
+.api-presentation__bg {
+  position: absolute;
+  right: 0;
+  z-index: -1;
+  top: 410px;
+  height: 360px;
+  width: 408px;
+  background: black;
+}
+
+@media screen and (max-width: 925px) {
+  .api-presentation__bg {
+    display: none;
+  }
+}
+
+.api-presentation__bg::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.66;
+  background: url("../assets/presentationBG.svg") center center no-repeat;
+  background-position: -1230px -650px;
+  pointer-events: none;
+}
+
+.api-presentation__bg::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background-image: linear-gradient(225deg, #00ff99 0%, #9933ff 100%);
+  mix-blend-mode: multiply;
+  opacity: 1;
+  pointer-events: none;
+}
+
+.api-presentation__content {
+  z-index: 2;
+  max-width: 1140px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 925px) {
+  .api-presentation__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .api-presentation__content .api-presentation__content__left {
+    width: 95%;
+  }
+  .api-presentation__content .api-presentation__content__right {
+    margin-top: 2vmin;
+    width: 100%;
+  }
+  .api-presentation__content .api-presentation__content__right p {
+    margin: 8vmin 0;
+    line-height: 2rem;
+  }
+  .api-presentation__content .api-presentation__content__right ul {
+    margin-top: 4vmin;
+  }
+}
+
+.api-presentation__content__left {
+  width: 60%;
+  padding-left: 4vmin;
+}
+
+.api-presentation__content__left img {
+  width: 100%;
+  height: auto;
+}
+
+.api-presentation__content__right {
+  width: 40%;
+  padding: 2vmin 7vmin;
+}
+
+.api-presentation__content__right h3 {
+  font-family: "interface";
+  margin: 3vmin 0;
+  font-size: 1.5rem;
+}
+
+.api-presentation__content__right p {
+  font-family: "interface-light";
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+  color: lightgray;
+}
+
+.api-presentation__content__right ul {
+  font-family: "SpaceMono";
+  margin-top: 3vmin;
+}
+
+.api-presentation__content__right ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 2vmin 0;
+}
+
+.api-presentation__content__right ul li .api-link {
+  display: inline-block;
+  margin: 0 1vmin;
+  font-size: 1.1rem;
+  position: relative;
+  cursor: pointer;
+  background: -webkit-gradient(linear, left top, right top, from(#3191ff), color-stop(#00e6cc), to(#3191ff)) 0px 100%/300%;
+  background: linear-gradient(to right, #3191ff, #00e6cc, #3191ff) 0px 100%/300%;
+  color: transparent;
+  -webkit-background-clip: text;
+}
+
+.api-presentation__content__right ul li .api-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 1px;
+  background: -webkit-gradient(linear, left top, right top, from(#3191ff), color-stop(#00e6cc), to(#3191ff)) 0px 100%/300%;
+  background: linear-gradient(to right, #3191ff, #00e6cc, #3191ff) 0px 100%/300%;
+  left: 0;
+  right: 0;
+}
+
+.api-presentation__content__right ul li .api-link:hover {
+  -webkit-animation: btn-animation 2.5s infinite;
+          animation: btn-animation 2.5s infinite;
+}
+
+.api-presentation__content__right ul li .api-link:hover::after {
+  -webkit-animation: btn-animation 2.5s infinite;
+          animation: btn-animation 2.5s infinite;
+}
+
+.api-presentation__content__right ul li .api-link:hover + .endIcons {
+  -webkit-transform: translateX(5px);
+          transform: translateX(5px);
+}
+
+.api-presentation__content__right ul li .endIcons {
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.api-presentation__content__right ul li .endIcons span {
+  height: 18px;
+  width: 30px;
+  border-radius: 7px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: linear-gradient(45deg, #9345fa 0%, #ff6666 100%);
+  color: #121212;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-family: "Montserrat-Bold";
+  font-size: 9px;
+  font-weight: bold;
+  margin-left: 5px;
+  font-weight: 900;
+}
+
+.api-presentation__content__right ul li .endIcons img {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
 }
 
 .caroussel {
@@ -1163,5 +1374,20 @@ main {
     min-width: 204px;
     max-width: 204px;
   }
+}
+
+.subCaroussel-section {
+  position: relative;
+  width: 100%;
+  padding-top: 100px;
+}
+
+.subCaroussel-section__content {
+  width: 100%;
+}
+
+.subCaroussel-section__content video {
+  width: 100%;
+  height: auto;
 }
 /*# sourceMappingURL=main.css.map */

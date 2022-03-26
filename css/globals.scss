@@ -45,6 +45,14 @@ body{
     overflow-x: hidden;
 }
 
+@keyframes btn-animation {
+    0%{
+        background-position: 0px center;
+    }100%{
+        background-position: -300% center;
+    }
+}
+
 .cta-btn{
     display: flex;
     align-items: center;
@@ -64,13 +72,5 @@ body{
     {
         animation: btn-animation 2.5s infinite linear;
     }
-    
 
-    @keyframes btn-animation {
-        0%{
-            background-position: 0px center;
-        }100%{
-            background-position: -300% center;
-        }
-    }
 }

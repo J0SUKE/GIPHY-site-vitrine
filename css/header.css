@@ -42,6 +42,24 @@ body {
   overflow-x: hidden;
 }
 
+@-webkit-keyframes btn-animation {
+  0% {
+    background-position: 0px center;
+  }
+  100% {
+    background-position: -300% center;
+  }
+}
+
+@keyframes btn-animation {
+  0% {
+    background-position: 0px center;
+  }
+  100% {
+    background-position: -300% center;
+  }
+}
+
 .cta-btn {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -67,24 +85,6 @@ body {
 .cta-btn:hover {
   -webkit-animation: btn-animation 2.5s infinite linear;
           animation: btn-animation 2.5s infinite linear;
-}
-
-@-webkit-keyframes btn-animation {
-  0% {
-    background-position: 0px center;
-  }
-  100% {
-    background-position: -300% center;
-  }
-}
-
-@keyframes btn-animation {
-  0% {
-    background-position: 0px center;
-  }
-  100% {
-    background-position: -300% center;
-  }
 }
 
 header {

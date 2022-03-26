@@ -4,7 +4,7 @@ let currentSlideIndex=0;
 let slides = [...document.querySelectorAll(".caroussel__slide")];
 let smartPhoneCarousselSlides = [...document.querySelectorAll(".smartphone-caroussel img")];
 let maxSlides = slides.length;
-let slidesIndicators = document.querySelectorAll(".caroussel-indicator__cases span");
+let slidesIndicators = [...document.querySelectorAll(".caroussel-indicator__cases span")];
 
 function setZindex(element,zindex) 
 {
@@ -14,12 +14,14 @@ function setZindex(element,zindex)
 
 function AnimateSmartphone(direction) {
     
-    let flow;
+    let flow; // la direction inverse dans laquelle vas le caroussel
     flow = (direction=="next" ? "prev":"next" );
 
+    // on desactive l'element precedent 
     smartPhoneCarousselSlides[getNextElement(currentSlideIndex,flow)].classList.remove("active");
     smartPhoneCarousselSlides[getNextElement(currentSlideIndex,flow)].classList.add("inactive");    
 
+    // on active l'element actuel
     smartPhoneCarousselSlides[currentSlideIndex].classList.remove("invisible");
     setTimeout(() => {
         smartPhoneCarousselSlides[currentSlideIndex].classList.add("active");    
@@ -27,38 +29,45 @@ function AnimateSmartphone(direction) {
 }
 
 function animateIndicator() {
+    
+    // se charge de l'indicateur de slides dans le caroussel 
+    
     document.querySelector(".caroussel-indicator p").innerHTML = `${currentSlideIndex+1} / ${maxSlides}`;
     slidesIndicators[currentSlideIndex].classList.remove("inactive");
     slidesIndicators[currentSlideIndex].classList.add("active");
     
-    let indSpans = [...slidesIndicators];
-    indSpans.filter(element=>element!=slidesIndicators[currentSlideIndex]).forEach(element => {
+    slidesIndicators.filter(element=>element!=slidesIndicators[currentSlideIndex]).forEach(element => {
         element.classList.remove("active");
         element.classList.add("inactive");
     });
 
 }
 
-function animateSldies(direction) {
+function animateSlides(direction) {
     
-    let flow,flowReverse;
+    let flow,flowReverse; // flow vas server a determiner l'elements precedent le node actuel
+        // expilcations : 
+        // si on appuie sur next alors l'element precedent dans le caroussel est le Node precedent dans le DOM
+        // par contre si on clique sur prev alors l'element precedent est l'element qui vient apres le node actuel
     flow = (direction=="next" ? "prev":"next" );
     flowReverse = (direction=="next" ? "next":"prev" );
     
-    setZindex(slides[getNextElement(currentSlideIndex,flow)] , maxSlides); // on met le precedent a max
-    setZindex(slides[currentSlideIndex] , maxSlides-1);
+    setZindex(slides[getNextElement(currentSlideIndex,flow)] , maxSlides); // on met le zIndex du precedent au max
+    setZindex(slides[currentSlideIndex] , maxSlides-1); // on met le zIndex de l'element actuel en dessous (le temps de l'animation)
 
     // tout le reste doit etre a 0
+    // vu qu'il y'a que 3 elements c'est forcement celui qui vient apres l'actuel
     setZindex(slides[getNextElement(currentSlideIndex,flowReverse)] , 0);
 
-    
+    // 0n lance les animations ...
+
     slides[getNextElement(currentSlideIndex,flow)].classList.add("inactive"); // on le fait disparaitre
     slides[currentSlideIndex].classList.add("active");
 
     setTimeout(() => {
         
         setZindex(slides[getNextElement(currentSlideIndex,flow)] , maxSlides-1); // on met le precedent a max-1
-        setZindex(slides[currentSlideIndex] , maxSlides);
+        setZindex(slides[currentSlideIndex] , maxSlides);// on met l'actuel a max
 
         slides[getNextElement(currentSlideIndex,flow)].classList.remove("inactive");
         
@@ -69,7 +78,8 @@ function animateSldies(direction) {
     }, 500); // 500 est la durée de l'animation qui fait disparaitre l'element
 }
 
-function getNextElement(current,direction) {
+function getNextElement(current,direction) // renvoie l'index du prochain element selon la direction du caroussel
+{
     if (direction=="next") 
     {
         return (current==(maxSlides-1) ? 0 : current+1);
@@ -87,7 +97,7 @@ btns.forEach(element => {
           
         AnimateSmartphone(element.dataset.btn);
         animateIndicator();
-        animateSldies(element.dataset.btn);
+        animateSlides(element.dataset.btn);
 
     })
 });
@@ -109,8 +119,6 @@ function setDark() {
         imgFirstSlide.src = "./assets/phome-slide1-dark.gif";
         imgFirstSlide.classList.remove("inactive");
         imgFirstSlide.classList.add("active");
-
-
     }, 300);
 }
 
@@ -191,8 +199,8 @@ function resetCaroussel() {
     slidesIndicators[currentSlideIndex].classList.remove("inactive");
     slidesIndicators[currentSlideIndex].classList.add("active");
     
-    let indSpans = [...slidesIndicators];
-    indSpans.filter(element=>element!=slidesIndicators[currentSlideIndex]).forEach(element => {
+
+    slidesIndicators.filter(element=>element!=slidesIndicators[currentSlideIndex]).forEach(element => {
         element.classList.remove("active");
         element.classList.add("inactive");
     });
