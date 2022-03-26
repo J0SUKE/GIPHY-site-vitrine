@@ -50,7 +50,7 @@ In my learning journey of modern responsive web desing and javascripts Front End
 <!-- CONTACT -->
 ## Contact
 
-* [twitter](https://twitter.com/home)
+* [twitter](https://twitter.com/Jean_M_____I)
 
 * [Project Link](https://github.com/J0SUKE/GIPHY-site-vitrine)
 
