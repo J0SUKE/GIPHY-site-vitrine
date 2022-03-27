@@ -2,8 +2,9 @@ let btns = document.querySelectorAll(".caroussel-btn");
 
 let currentSlideIndex=0;
 let slides = [...document.querySelectorAll(".caroussel__slide")];
-let smartPhoneCarousselSlides = [...document.querySelectorAll(".smartphone-caroussel img")];
-let maxSlides = slides.length;
+const [,...smartPhoneCarousselSlides] = document.querySelectorAll(".smartphone-caroussel img");
+let themeSlides = [...document.querySelectorAll(".smartphone-caroussel img")].slice(0,2);
+let maxSlides = smartPhoneCarousselSlides.length;
 let slidesIndicators = [...document.querySelectorAll(".caroussel-indicator__cases span")];
 
 function setZindex(element,zindex) 
@@ -14,12 +15,14 @@ function setZindex(element,zindex)
 
 function AnimateSmartphone(direction) {
     
+    // cette fonction est appelée apres que currentSlideIndex ait été incrémenté
+    
     let flow; // la direction inverse dans laquelle vas le caroussel
     flow = (direction=="next" ? "prev":"next" );
 
     // on desactive l'element precedent 
-    smartPhoneCarousselSlides[getNextElement(currentSlideIndex,flow)].classList.remove("active");
-    smartPhoneCarousselSlides[getNextElement(currentSlideIndex,flow)].classList.add("inactive");    
+    smartPhoneCarousselSlides[getNextElement(currentSlideIndex,maxSlides-1,flow)].classList.remove("active");
+    smartPhoneCarousselSlides[getNextElement(currentSlideIndex,maxSlides-1,flow)].classList.add("inactive");    
 
     // on active l'element actuel
     smartPhoneCarousselSlides[currentSlideIndex].classList.remove("invisible");
@@ -52,24 +55,24 @@ function animateSlides(direction) {
     flow = (direction=="next" ? "prev":"next" );
     flowReverse = (direction=="next" ? "next":"prev" );
     
-    setZindex(slides[getNextElement(currentSlideIndex,flow)] , maxSlides); // on met le zIndex du precedent au max
+    setZindex(slides[getNextElement(currentSlideIndex,maxSlides-1,flow)] , maxSlides); // on met le zIndex du precedent au max
     setZindex(slides[currentSlideIndex] , maxSlides-1); // on met le zIndex de l'element actuel en dessous (le temps de l'animation)
 
     // tout le reste doit etre a 0
     // vu qu'il y'a que 3 elements c'est forcement celui qui vient apres l'actuel
-    setZindex(slides[getNextElement(currentSlideIndex,flowReverse)] , 0);
+    setZindex(slides[getNextElement(currentSlideIndex,maxSlides-1,flowReverse)] , 0);
 
     // 0n lance les animations ...
 
-    slides[getNextElement(currentSlideIndex,flow)].classList.add("inactive"); // on le fait disparaitre
+    slides[getNextElement(currentSlideIndex,maxSlides-1,flow)].classList.add("inactive"); // on le fait disparaitre
     slides[currentSlideIndex].classList.add("active");
 
     setTimeout(() => {
         
-        setZindex(slides[getNextElement(currentSlideIndex,flow)] , maxSlides-1); // on met le precedent a max-1
+        setZindex(slides[getNextElement(currentSlideIndex,maxSlides-1,flow)] , maxSlides-1); // on met le precedent a max-1
         setZindex(slides[currentSlideIndex] , maxSlides);// on met l'actuel a max
 
-        slides[getNextElement(currentSlideIndex,flow)].classList.remove("inactive");
+        slides[getNextElement(currentSlideIndex,maxSlides-1,flow)].classList.remove("inactive");
         
         slides.filter(element=>element!=slides[currentSlideIndex]).forEach(element => {
             element.classList.remove("active");
@@ -78,13 +81,13 @@ function animateSlides(direction) {
     }, 500); // 500 est la durée de l'animation qui fait disparaitre l'element
 }
 
-function getNextElement(current,direction) // renvoie l'index du prochain element selon la direction du caroussel
+function getNextElement(current,max,direction) // renvoie l'index du prochain element selon la direction du caroussel
 {
     if (direction=="next") 
     {
-        return (current==(maxSlides-1) ? 0 : current+1);
+        return (current==(max) ? 0 : current+1);
     }
-    return (current==0 ? (maxSlides-1) : current-1);
+    return (current==0 ? (max) : current-1);
 
 }
 
@@ -105,62 +108,62 @@ btns.forEach(element => {
 
 //======================= dark-light caroussel ======================================
 
-let imgFirstSlide = smartPhoneCarousselSlides[0];
 let cursors = document.querySelectorAll(".cursor");
-
-function setDark() {
-    
-    imgFirstSlide.classList.remove("active");
-    imgFirstSlide.classList.add("inactive");
-    
-    imgFirstSlide.classList.remove("light");
-    imgFirstSlide.classList.add("dark");
-    setTimeout(() => {
-        imgFirstSlide.src = "./assets/phome-slide1-dark.gif";
-        imgFirstSlide.classList.remove("inactive");
-        imgFirstSlide.classList.add("active");
-    }, 300);
-}
-
-function setLight() {
-    
-    imgFirstSlide.classList.remove("active");
-    imgFirstSlide.classList.add("inactive");
-    
-    imgFirstSlide.classList.remove("dark");
-    imgFirstSlide.classList.add("light");
-    setTimeout(() => {
-        imgFirstSlide.src = "./assets/phome-slide1-light.gif";    
-        imgFirstSlide.classList.remove("inactive");
-        imgFirstSlide.classList.add("active");
-    }, 300);
-}
-
+let currentThemeIndex = 1; // 1 correspond a dark
+                            // 0 correspond a light
+let currentTheme = themeSlides[currentThemeIndex];
+                        
 let themeBtns = [...document.querySelectorAll(".theme-btn__icons img"),...document.querySelectorAll(".theme-btn__container p"),...document.querySelectorAll(".mobile-theme-btn__container p")];
 
 themeBtns.forEach(element=>{
     element.addEventListener("click",()=>{
-        if(element.dataset.theme=="light" && !imgFirstSlide.classList.contains("light"))
+        if ((element.dataset.theme=="light" && currentTheme.classList.contains("dark"))) 
         {
-            cursors.forEach(element => {
+            cursors.forEach(element=>{
                 element.classList.remove("dark");
                 element.classList.add("light");
-                element.textContent = "Light";    
-            });
-            
-            setLight();
-        }
-        else if(element.dataset.theme=="dark" && !imgFirstSlide.classList.contains("dark"))
+                element.textContent = "Light";
+            })
+            switchTheme();
+                       
+        }        
+        else if(element.dataset.theme=="dark" && currentTheme.classList.contains("light"))
         {
-            cursors.forEach(element => {
+            cursors.forEach(element=>{
                 element.classList.remove("light");
                 element.classList.add("dark");
                 element.textContent = "Dark";
-            });
-            setDark();
+            })
+            switchTheme();
         }
+
+        
+
     });
 })
+
+function switchTheme() {
+            
+    currentThemeIndex=(currentThemeIndex==0 ? 1 : 0);
+    currentTheme = themeSlides[currentThemeIndex];
+    
+    // on desactive le precedent 
+
+    themeSlides[getNextElement(currentThemeIndex,1,"prev")].classList.remove("active");
+    themeSlides[getNextElement(currentThemeIndex,1,"prev")].classList.add("inactive");       
+
+    // on active le suivant
+    themeSlides[currentThemeIndex].classList.remove("invisible");
+    setTimeout(() => {
+        
+        themeSlides[currentThemeIndex].classList.add("active");
+    }, 300);
+
+    smartPhoneCarousselSlides[0] = themeSlides[currentThemeIndex];
+
+
+}   
+
 
 //--------------------resize window--------------------------------
 
