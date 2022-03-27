@@ -157,6 +157,7 @@ function switchTheme() {
     setTimeout(() => {
         
         themeSlides[currentThemeIndex].classList.add("active");
+        themeSlides[currentThemeIndex].classList.remove("inactive");
     }, 300);
 
     smartPhoneCarousselSlides[0] = themeSlides[currentThemeIndex];
@@ -192,12 +193,17 @@ function resetCaroussel() {
         element.classList.remove("active");
     });
 
+    smartPhoneCarousselSlides[0]=themeSlides[1]
+
+    smartPhoneCarousselSlides[0].classList.remove("inactive");
+    smartPhoneCarousselSlides[0].classList.remove("invisible");
     smartPhoneCarousselSlides[0].classList.add("active");
     smartPhoneCarousselSlides.filter(element=>element!=smartPhoneCarousselSlides[0]).forEach(element => {
         element.classList.remove("active")
         element.classList.add("inactive")
     });
 
+    // on reset l'indicateru et le curseur
     document.querySelector(".caroussel-indicator p").innerHTML = `${1} / ${maxSlides}`;
     slidesIndicators[currentSlideIndex].classList.remove("inactive");
     slidesIndicators[currentSlideIndex].classList.add("active");
