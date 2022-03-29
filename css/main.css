@@ -1669,15 +1669,17 @@ main {
 }
 
 .lastSection__content h1 {
-  font-size: 3rem;
+  font-size: clamp(2rem, 5vw, 3rem);
   font-family: "Montserrat-Bold";
   font-weight: 800;
+  text-align: center;
 }
 
 .lastSection__content p {
   font-family: "interface";
   color: lightgray;
   margin: 3vmin 0 6vmin 0;
+  text-align: center;
 }
 
 .lastSection__content .cta-btn {
